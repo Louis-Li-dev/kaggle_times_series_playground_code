@@ -38,3 +38,15 @@ pip install -r requirements.txt
 
 ## Acknowledgments
 Special thanks to the Kaggle community for providing the competition and inspiring data.
+Cite the dataset with the following statement
+## Citation
+If you use the dataset in your project, please ensure proper attribution. Cite the dataset as follows:
+```bash
+@misc{store-sales-time-series-forecasting,
+    author = {Alexis Cook and DanB and inversion and Ryan Holbrook},
+    title = {Store Sales - Time Series Forecasting},
+    year = {2021},
+    howpublished = {\url{https://kaggle.com/competitions/store-sales-time-series-forecasting}},
+    note = {Kaggle}
+}
+```
