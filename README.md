@@ -19,7 +19,13 @@ The performance of these methods is evaluated using the metric **Root Mean Squar
 ![Performance Comparison](https://github.com/user-attachments/assets/3ade69a6-1250-478b-ade1-24f6ba563594)
 
 ---
-
+## Usage
+1. Install all the dependencies using ***requirements.txt***
+2. Create a **data** directory under the root directory. 
+3. Import the datasets **train.csv, test.csv, and sample_submission.csv** into the **data** direcotry
+4. Check the ***config.py*** file under folder experiment
+5. Head to any jupter notebook to get started
+---
 ## Installation
 To set up the project and install dependencies, run the following command:
 
