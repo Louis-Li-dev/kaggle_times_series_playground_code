@@ -5,10 +5,11 @@ def get_date_details(df: pd.DataFrame) -> pd.DataFrame:
     """
     Extracts day of the week and month from the 'date' column in the DataFrame.
     
-    Args:
+    ---
+    ## Args:
         df (pd.DataFrame): Input DataFrame with a 'date' column.
     
-    Returns:
+    ## Returns:
         pd.DataFrame: DataFrame with 'day' and 'month' columns added, and 'id' column dropped.
     """
     df = df.copy()
@@ -20,10 +21,11 @@ def one_hot(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
     """
     Performs one-hot encoding on categorical columns in the DataFrame.
     
-    Args:
+    ---
+    ## Args:
         df (pd.DataFrame): Input DataFrame with categorical columns.
     
-    Returns:
+    ## Returns:
         tuple: A tuple containing:
             - pd.DataFrame: DataFrame with original categorical columns dropped.
             - pd.DataFrame: DataFrame with one-hot encoded columns.
@@ -32,17 +34,23 @@ def one_hot(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
     dummies = pd.get_dummies(object_df)
     return df.drop(object_df.columns, axis=1), dummies
 
-def upload(pred: pd.Series, test_df: pd.DataFrame, filename: str = "../data/submission_xgb_1.csv", sample_submission_file_path: str = '../data/sample_submission.csv') -> None:
+def upload(
+        pred: pd.Series,
+        test_df: pd.DataFrame,
+        filename: str = "../data/submission_xgb_1.csv", 
+        sample_submission_file_path: str = '../data/sample_submission.csv'
+    ) -> None:
     """
     Uploads the prediction results by merging them with the sample submission file and saving to a CSV file.
     
-    Args:
+    ---
+    ## Args:
         pred (pd.Series): Series containing the predicted sales.
         test_df (pd.DataFrame): DataFrame containing the test data with 'id' column.
         filename (str): The filename for the output CSV file. Defaults to "../data/submission_xgb_1.csv".
         sample_submission_file_path (str): The file path for the sample submission file. Defaults to '../data/sample_submission.csv'.
     
-    Returns:
+    ## Returns:
         None
     """
     sub = pd.read_csv(sample_submission_file_path)
